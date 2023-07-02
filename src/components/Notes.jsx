@@ -24,14 +24,14 @@ function Notes() {
       {status === "failed" && <div className="relative p-5 bg-yellow-400 w-64 h-64 m-5 shadow-2xl overflow-hidden">Sorry, {error}</div>}
       {notes.map((note) =>  (
         <div
-          className="relative bg-teal-900 text-white text-center rounded-2xl w-64 h-64 m-5 shadow-2xl overflow-hidden"
+          className="relative bg-rose-900 text-white text-center rounded-2xl w-64 h-64 m-5 shadow-2xl overflow-hidden"
           key={note.id}
         >
           <div className="p-5">
             <h3 className="font-bold text-2xl mb-4">{note.title}</h3>
             <p>{note.content}</p>
           </div>
-            <div className="absolute bg-yellow-400 w-12 h-12 rotate-45 -top-6 -left-6" />
+            <div className="absolute bg-green-600 w-12 h-12 -hue-rotate-0 -left-6" />
             {user.id === note.user_id && (
               <div className="absolute  bottom-0 left-0 right-0 flex justify-center p-4">
                 <Link to={`/edit/${note.id}`}>

@@ -32,30 +32,30 @@ function App() {
 
 
   return (
-    <div className="bg-lime-100 h-[700px]">
-      <header className="bg-lime-50 py-6 px-20">
+    <div className="bg-orange-300 h-[700px]">
+      <header className="bg-orange-200 py-6 px-20">
         <nav className="h-full">
           <div className="container mx-auto flex justify-between items-center">
-            <h3 className="text-2xl font-bold -ml-12"><span className="text-emerald-500">Gabi</span> Notes</h3>
+            <h3 className="text-2xl font-bold -ml-12"><span className="text-pink-700">Abdishakur</span> Notes</h3>
             <ul className="hidden md:flex space-x-6 -mr-16">
               <li>
-                <Link to="/" className="text-xl px-4 py-2 rounded-2xl border-indigo-600 hover:border-b-2 text-emerald-500">Home</Link>
+                <Link to="/" className="text-xl px-4 py-2 rounded-2xl border-purple-400 hover:border-b-2 text-pink-700">Home</Link>
               </li>
               {isAuthenticated && (
                 <>
                   <li>
-                    <Link to="/add" className="text-xl px-4 py-2 rounded-2xl border-indigo-600 hover:border-b-2 text-emerald-500">
+                    <Link to="/add" className="text-xl px-4 py-2 rounded-2xl border-purple-400 hover:border-b-2 text-pink-700">
                       Add Note 
                     </Link>
                   </li>
                   <li>
-                    <Link to="/profile" className="text-xl px-4 py-2 rounded-2xl border-indigo-600 hover:border-b-2 text-emerald-500">
+                    <Link to="/profile" className="text-xl px-4 py-2 rounded-2xl border-purple-400 hover:border-b-2 text-pink-700">
                       Profile
                     </Link>
                   </li>
                   <li>
                     <Link onClick={() => handleLogout()}
-                      className="text-xl px-4 py-2 rounded-2xl border-indigo-600 hover:border-b-2 text-emerald-500">
+                      className="text-xl px-4 py-2 rounded-2xl border-purple-400 hover:border-b-2 text-pink-700">
                       Logout
                     </Link>
                   </li>
@@ -64,12 +64,12 @@ function App() {
               {!isAuthenticated && (
                 <>
                   <li>
-                    <Link to="/login" className="text-xl px-4 py-2 rounded-2xl border-indigo-600 hover:border-b-2 text-emerald-500">
+                    <Link to="/login" className="text-xl px-4 py-2 rounded-2xl border-purple-400 hover:border-b-2 text-pink-700">
                       Login
                     </Link>
                   </li>
                   <li>
-                    <Link to="/register" className="text-xl px-4 py-2 rounded-2xl border-indigo-600 hover:border-b-2 text-emerald-500">
+                    <Link to="/register" className="text-xl px-4 py-2 rounded-2xl border-purple-400 hover:border-b-2 text-pink-700">
                       Register
                     </Link>
                   </li>

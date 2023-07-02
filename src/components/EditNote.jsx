@@ -48,7 +48,7 @@ const EditNote = () => {
   };
 
   return (
-    <div className="bg-white p-10 rounded-lg shadow md:w-3/4 mx-auto lg:w-1/2">
+    <div className="bg-white mt-16 p-10 rounded-lg shadow md:w-3/4 mx-auto lg:w-1/2">
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
@@ -79,7 +79,7 @@ const EditNote = () => {
 
           <button
             type="submit"
-            className="block w-full bg-yellow-400 text-black font-bold p-4 rounded-lg hover:bg-yellow-500"
+            className="block text-white w-full bg-teal-900 text-black font-bold p-4 rounded-lg hover:bg-teal-700"
           >
             Update Note
           </button>

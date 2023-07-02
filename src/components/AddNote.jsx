@@ -2,10 +2,12 @@ import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { useAddNoteMutation } from '../store/api/NoteSlice';
+import { useNavigate } from 'react-router-dom';
 
 const AddNote = () => {
 
   const [addNote ] = useAddNoteMutation();
+  const navigate = useNavigate();
 
   const initialValues = {
     title: '',
@@ -23,22 +25,22 @@ const AddNote = () => {
     addNote({
       title: values.title,
       content: values.content,
-    });
-    
+    })
+      navigate("/")
 
     // Reset the form after submission
     resetForm();
   };
 
   return (
-    <div className="bg-white p-10 rounded-lg shadow md:w-3/4 mx-auto lg:w-1/2">
+    <div className="bg-white mt-16 p-10 rounded-lg shadow md:w-3/4 mx-auto lg:w-1/2">
       <Formik
         initialValues={initialValues}
         validationSchema={validationSchema}
         onSubmit={handleSubmit}
       >
         <Form>
-          <div className="mb-5">
+          <div className="mb-5 ">
             <Field
               type="text"
               id="title"
@@ -61,7 +63,7 @@ const AddNote = () => {
 
           <button
             type="submit"
-            className="block w-full bg-yellow-400 text-black font-bold p-4 rounded-lg hover:bg-yellow-500"
+            className="block text-white w-full bg-teal-900 text-black font-bold p-4 rounded-lg hover:bg-teal-700"
           >
             Add Note
           </button>
